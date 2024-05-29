@@ -6,7 +6,7 @@ const CloseButton1 = () => {
      
 
         // Redirect to WhatsApp URL scheme
-        window.location.replace("whatsapp://");
+        window.open("whatsapp://");
     };
 
     return (
