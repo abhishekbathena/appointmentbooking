@@ -6,10 +6,7 @@ const CloseButton1 = () => {
         window.open('', '_self');
         window.close();
 
-        // Fallback: Redirect back to WhatsApp
-        setTimeout(() => {
-            window.location.href = 'whatsapp://';
-        }, 1000);
+       
     };
 
     return (
