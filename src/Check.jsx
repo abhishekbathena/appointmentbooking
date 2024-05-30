@@ -1,17 +1,20 @@
 import React from 'react';
 
 const CloseButton1 = () => {
-    const handleRedirect = () => {
-        // Attempt to redirect to WhatsApp
-     
+    const handleClose = () => {
+        // Attempt to close the window if it was opened by JavaScript
+        window.open('', '_self');
+        window.close();
 
-        // Redirect to WhatsApp URL scheme
-        window.open("whatsapp://");
+        // Fallback: Redirect back to WhatsApp
+        setTimeout(() => {
+            window.location.href = 'whatsapp://';
+        }, 1000);
     };
 
     return (
         <div style={{ textAlign: 'center', marginTop: '50px' }}>
-            <button onClick={handleRedirect} style={{ padding: '10px 20px', fontSize: '16px' }}>
+            <button onClick={handleClose} style={{ padding: '10px 20px', fontSize: '16px' }}>
                 Return to WhatsApp
             </button>
             <p style={{ marginTop: '20px', fontSize: '14px', color: 'gray' }}>
